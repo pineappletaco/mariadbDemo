@@ -1,0 +1,92 @@
+/* 表格大標題樣式 */
+.reservation-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 30px 0;
+  color: #f0f0f0;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+/* 標題底部裝飾線 */
+.reservation-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #646cff;
+  border-radius: 2px;
+}
+/* 表格基本樣式 */
+.reservation-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* 固定表格布局以確保列寬一致 */
+  margin: 20px 0;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 表格標題行樣式 */
+.reservation-table thead {
+  background-color: #2a2a2a;
+  font-weight: bold;
+}
+
+/* 表格標題單元格樣式 */
+.reservation-table th {
+  padding: 15px 10px;
+  text-align: left;
+  border-bottom: 2px solid #444;
+  white-space: nowrap;
+}
+
+/* 設定各列的寬度比例 */
+.reservation-table th:nth-child(1) { /* 預約 */
+  width: 10%;
+}
+.reservation-table th:nth-child(2) { /* ID */
+  width: 15%;
+}
+.reservation-table th:nth-child(3) { /* 學生資訊 */
+  width: 25%;
+}
+.reservation-table th:nth-child(4) { /* 座位 */
+  width: 15%;
+}
+.reservation-table th:nth-child(5) { /* 時段 */
+  width: 20%;
+}
+.reservation-table th:nth-child(6) { /* 建立時間 */
+  width: 15%;
+}
+
+/* 表格內容單元格樣式 */
+.reservation-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #333;
+}
+
+/* 表格行交替顏色 */
+.reservation-table tbody tr:nth-child(odd) {
+  background-color: #262626;
+}
+
+/* 表格行懸停效果 */
+.reservation-table tbody tr:hover {
+  background-color: #303030;
+}
+
+/* 響應式調整 */
+@media screen and (max-width: 768px) {
+  .reservation-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
